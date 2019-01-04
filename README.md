@@ -7,12 +7,11 @@ This project is a hello world Beam application that uses the flink runner. This 
 * Build the jar
 
 ```bash
-
 cd word-count-beam
 mvn clean package -Pflink-runner -Dmaven.test.skip=true
 ```
 
-* Will output needed fat jar to `./target/word-count-beam-bundled-0.1.jar`
+* Will output needed fat jar to `word-count-beam/target/word-count-beam-bundled-0.1.jar`
 
 ### How to use jenv on macos
 
@@ -26,17 +25,21 @@ brew install jenv
 echo 'eval "$(jenv init -)"' >> ~/.bash_profile
 # Add each jdk you may already have installed
 # So jenv can be used to switch between them
- jenv add /Library/Java/JavaVirtualMachines/jdk1.8.0_192.jdk/Contents/Home
- jenv add /Library/Java/JavaVirtualMachines/jdk-10.0.1.jdk/Contents/Home
+jenv add /Library/Java/JavaVirtualMachines/jdk1.8.0_192.jdk/Contents/Home
+jenv add /Library/Java/JavaVirtualMachines/jdk-10.0.1.jdk/Contents/Home
 # Set the global jdk to use
- jenv global 10.0
+jenv global 10.0
 # Enable every plugin
- for i in $(jenv plugins); do jenv enable-plugin ${i}; done
+for i in $(jenv plugins); do jenv enable-plugin ${i}; done
 # Add the export plugin
- jenv enable-plugin export
- source ~/.bashrc
-# Now Make version 1.8 the version to use in the current shell.
- export JENV_VERSION=1.8
+jenv enable-plugin export
+source ~/.bashrc
+# Now Make version 1.8 the version to use
+export JENV_VERSION=1.8
+# verify
+jenv rehash
+java -version
+
 ```
 
 ### Changes to WordCount
