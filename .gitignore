@@ -1,0 +1,5 @@
+word-count-beam/target/**
+.vscode
+.settings
+.classpath
+.project
