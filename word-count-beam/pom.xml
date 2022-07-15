@@ -28,7 +28,7 @@
 
   <properties>
     <beam.version>2.9.0</beam.version>
-    <aws-java-sdk.version>1.11.477</aws-java-sdk.version>
+    <aws-java-sdk.version>1.12.261</aws-java-sdk.version>
     <bigquery.version>v2-rev20181104-1.27.0</bigquery.version>
     <google-clients.version>1.27.0</google-clients.version>
     <guava.version>20.0</guava.version>
